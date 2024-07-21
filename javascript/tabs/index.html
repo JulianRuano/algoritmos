@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="about-center section-center">
+    <article class="about">
+        <div class="btn-container">
+            <button class="tab-btn active" data-id="gateway">API Gateway</button>
+            <button class="tab-btn" data-id="config">Configuración</button>
+            <button class="tab-btn" data-id="repositorio">Repositorio</button>
+        </div>
+        <div class="about-content">
+
+        <div class="content active" id="gateway">
+            <h4>API Gateway</h4>
+            <p>
+            Esta es una API Gateway construida con Spring Cloud Gateway que actúa como punto de entrada único para las solicitudes a los microservicios
+            de la aplicación. Utiliza un balanceador de carga para distribuir el tráfico entre las instancias de cada microservicio.
+
+            Configura un contenedor de NGINX utilizando Docker Compose. El contenedor de NGINX está configurado para servir archivos estáticos
+            (imágenes) desde un volumen de Docker, y expone el servidor web en el puerto 8085 de la máquina host.
+            </p>
+        </div>
+
+        <div class="content" id="config">
+            <h4>Configuración</h4>
+            <p>
+            La API Gateway está configurada para enrutar las solicitudes a tres microservicios diferentes:
+            <ul>
+                <li>Product Microservice</li>
+                <li>Booking Microservice</li>
+                <li>Stock Microservice</li>
+                <li>File Microservice</li>
+            </ul>         
+            </p>
+        </div>
+
+        <div class="content" id="repositorio">
+            <h4>Repositorio</h4>
+            <p>
+            GitHub: 
+            <a href="https://github.com/JulianRuano/api-gateway" target="_blank"> Api Gateway</a>
+
+            </p>
+        </div>
+
+        </div>
+    </article>
+    </div>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
